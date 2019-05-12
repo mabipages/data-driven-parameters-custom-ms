@@ -2,7 +2,7 @@
   "name": "data-driven-parameters",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://tamirgilany.github.io/data-driven-parameters-custom-ms/",
+  "homepage": "https://mabipages.github.io/data-driven-parameters-custom-ms/",
   "dependencies": {
     "@tableau/tableau-ui": "^2.0.1",
     "@types/react-router-dom": "^4.2.7",
