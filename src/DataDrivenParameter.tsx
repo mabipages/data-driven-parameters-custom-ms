@@ -183,7 +183,7 @@ class DataDrivenParameter extends React.Component<any, State> {
         return inputArray.indexOf(item) === index;
       });
 
-      if (settings.altMultiselect === 'true') {
+      if (settings.altMultiselect !== 'true') {
         if (
           settings.dataType &&
           (settings.dataType === 'int' || settings.dataType === 'float')
