@@ -183,24 +183,26 @@ class DataDrivenParameter extends React.Component<any, State> {
         return inputArray.indexOf(item) === index;
       });
 
-      if (
-        settings.dataType &&
-        (settings.dataType === 'int' || settings.dataType === 'float')
-      ) {
-        list = list.map(Number);
-        // Sort according to settings (numerical)
-        if (settings.sort && settings.sort === 'desc') {
-          list.sort((a, b) => b - a);
+      if (settings.altMultiselect === 'true') {
+        if (
+          settings.dataType &&
+          (settings.dataType === 'int' || settings.dataType === 'float')
+        ) {
+          list = list.map(Number);
+          // Sort according to settings (numerical)
+          if (settings.sort && settings.sort === 'desc') {
+            list.sort((a, b) => b - a);
+          } else {
+            list.sort((a, b) => a - b);
+          }
         } else {
-          list.sort((a, b) => a - b);
-        }
-      } else {
-        // Sort according to settings
-        if (settings.sort && settings.sort === 'desc') {
-          list.sort();
-          list.reverse();
-        } else {
-          list.sort();
+          // Sort according to settings
+          if (settings.sort && settings.sort === 'desc') {
+            list.sort();
+            list.reverse();
+          } else {
+            list.sort();
+          }
         }
       }
 
